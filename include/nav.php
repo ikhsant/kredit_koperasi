@@ -33,6 +33,10 @@
         <?php  } ?>
 
         <?php if($_SESSION['akses_level'] == "kepala_koperasi"){ ?>
+         <li><a href="alternatif.php"><i class="fa fa-exchange"></i> Alternatif</a></li>
+        <li><a href="kriteria.php"><i class="fa fa-exchange"></i> Kriteria</a></li>
+        <li><a href="perhitungan.php"><i class="fa fa-calculator"></i> Perhitungan</a></li>
+        <li><a href="laporan.php"><i class="fa fa-print"></i> Laporan</a></li>
         <?php  } ?>
 
       </ul>

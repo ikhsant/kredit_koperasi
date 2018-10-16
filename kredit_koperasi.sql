@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2018 at 02:17 AM
+-- Generation Time: Oct 09, 2018 at 11:29 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -39,7 +39,9 @@ CREATE TABLE `alternatif` (
 --
 
 INSERT INTO `alternatif` (`id_alternatif`, `kode_alternatif`, `nama_alternatif`) VALUES
-(1, 'A01', 'Asep');
+(1, 'A1', 'Asep'),
+(2, 'A2', 'Iyus'),
+(3, 'A3', 'Yuli');
 
 -- --------------------------------------------------------
 
@@ -52,6 +54,14 @@ CREATE TABLE `kriteria` (
   `kode_kriteria` varchar(255) NOT NULL,
   `nama_kriteria` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kriteria`
+--
+
+INSERT INTO `kriteria` (`id_kriteria`, `kode_kriteria`, `nama_kriteria`) VALUES
+(1, 'K1', 'PEKERJAAN'),
+(2, 'K2', 'KEUANGAN');
 
 -- --------------------------------------------------------
 
@@ -100,7 +110,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nip`, `nama_user`, `jenis_kelamin`, `telp`, `email`, `username`, `password`, `foto`, `akses_level`, `alamat`) VALUES
-(1, '123456', 'Admin Aplikasi', 'L', '085217965569', 'ikhsan@gmail.com', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'eji20lqubhcg4ks.png', 'admin', ''),
+(1, '123456', 'Sandi', 'L', '085217965569', 'ikhsan@gmail.com', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'eji20lqubhcg4ks.png', 'admin', ''),
 (6, '223344', 'Kepala Koperasi', 'L', '0821565465', 'kepalakoperasi@ptsaya.com', 'kepala_koperasi', 'cb0d70ffe849b09e7d24c81cdb09b2a8bdc6d082', '80s583yto0sggsg.png', 'kepala_koperasi', 'Jl rya Cibolang');
 
 --
@@ -139,13 +149,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `alternatif`
 --
 ALTER TABLE `alternatif`
-  MODIFY `id_alternatif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_alternatif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kriteria`
 --
 ALTER TABLE `kriteria`
-  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
